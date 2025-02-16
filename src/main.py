@@ -78,8 +78,7 @@ def rightAutonomous():
     drivetrain.drive_for(FORWARD, 100, MM, 60, PERCENT)
     drivetrain.turn_for(LEFT, 40, DEGREES, 60, PERCENT)
     liftGroup.spin_to_position(-300, DEGREES, 100, PERCENT)
-    drivetrain.drive_for(FORWARD, 700, MM, 60, PERCENT)
-    liftGroup.spin_to_position(18, DEGREES, 60, PERCENT)
+    drivetrain.drive_for(FORWARD, 700, MM, 30, PERCENT)
     
 def spinToSpikePosition():
     liftGroup.spin_to_position(-540, DEGREES, 60, PERCENT)
