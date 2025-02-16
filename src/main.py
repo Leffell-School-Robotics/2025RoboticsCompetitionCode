@@ -45,7 +45,6 @@ def on_down_button_pressed():
 def on_lift_button_released():
     liftGroup.stop()
 
-
 ####### CLAW CODE ↓ ########
 
 claw = Motor(Ports.PORT12)
@@ -86,8 +85,6 @@ def spinToSpikePosition():
     
 limit = Limit(brain.three_wire_port.a)
 limit.pressed(lambda: liftGroup.reset_position())    
-controller.buttonA.pressed(spinToClimbPosition)
-controller.buttonX.pressed(spinToSpikePosition)
 
 def autonomous():
     rightAutonomous()
@@ -101,6 +98,8 @@ def user_control():
     controller.buttonR2.released(on_claw_button_released)
     controller.buttonL2.pressed(on_close_button_pressed)
     controller.buttonL2.released(on_claw_button_released)
+    controller.buttonA.pressed(spinToClimbPosition)
+    controller.buttonX.pressed(spinToSpikePosition)
     drivetrain_l_needs_to_be_stopped_controller = False
     drivetrain_r_needs_to_be_stopped_controller = False
     while True:
