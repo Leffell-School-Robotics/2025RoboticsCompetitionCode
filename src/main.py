@@ -69,15 +69,16 @@ def spinToClimbPosition():
     liftGroup.spin_to_position(18, DEGREES, 100, PERCENT)
     
 def rightAutonomous():
+    claw.spin_for(FORWARD, 30, DEGREES, 100, PERCENT)
     drivetrain.drive_for(FORWARD, 100, MM, 60, PERCENT)
     liftGroup.spin_to_position(-540, DEGREES, 60, PERCENT)
     drivetrain.drive_for(FORWARD, 600, MM, 60, PERCENT)
     liftGroup.spin_to_position(-200, DEGREES, 100, PERCENT)
     claw.spin_for(REVERSE, 10, DEGREES, 60, PERCENT)
-    drivetrain.turn_for(LEFT, 50, DEGREES, 60, PERCENT)
     drivetrain.drive_for(FORWARD, 100, MM, 60, PERCENT)
+    drivetrain.turn_for(LEFT, 40, DEGREES, 60, PERCENT)
     liftGroup.spin_to_position(-300, DEGREES, 100, PERCENT)
-    drivetrain.drive_for(FORWARD, 800, MM, 60, PERCENT)
+    drivetrain.drive_for(FORWARD, 700, MM, 60, PERCENT)
     liftGroup.spin_to_position(18, DEGREES, 60, PERCENT)
     
 def spinToSpikePosition():
